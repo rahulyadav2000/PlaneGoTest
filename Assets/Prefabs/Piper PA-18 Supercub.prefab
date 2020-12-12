@@ -10737,9 +10737,9 @@ GameObject:
   - component: {fileID: 7900814170143264040}
   - component: {fileID: 5350738055392393698}
   - component: {fileID: 4404698865840822491}
-  - component: {fileID: -6758790798302360739}
   - component: {fileID: -2682199941008034029}
-  - component: {fileID: -5098985818202277813}
+  - component: {fileID: 5322108316335244204}
+  - component: {fileID: 5733586650635150548}
   m_Layer: 0
   m_Name: Piper PA-18 Supercub
   m_TagString: Untagged
@@ -10755,7 +10755,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5855066102425212983}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.72, y: 0.15, z: 9.8}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 6692202474785379385}
@@ -10872,20 +10872,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 124
   m_CollisionDetection: 0
---- !u!114 &-6758790798302360739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5855066102425212983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d0097302ee3c184983c85e58406eb2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-2682199941008034029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10898,8 +10886,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904b89b5dde82d94088372013ccde91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &-5098985818202277813
-MeshCollider:
+  Runway: {fileID: 2579050622546506562, guid: f826ed3ae888a4446824507bcaab18f5, type: 3}
+  isCollected: 0
+  Coin: {fileID: 8300000, guid: cb15529e16c4d8148abb50497c022d52, type: 3}
+  explode: {fileID: 8300000, guid: e231f9cf95c7cec41bbc629c22c3ecce, type: 3}
+--- !u!82 &5322108316335244204
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855066102425212983}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7805047b58b84f040ba56c80c87b26ec, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &5733586650635150548
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10908,10 +10996,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4155154601734502990, guid: 49b5f4bf7fc2df748be9df579f730c8d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.055540968, y: 0.03, z: 0.05}
+  m_Center: {x: -0.0324008, y: 0.002734669, z: 0}
 --- !u!1 &5870313197360426872
 GameObject:
   m_ObjectHideFlags: 0

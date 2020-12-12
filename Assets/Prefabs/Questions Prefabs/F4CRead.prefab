@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8067731637877705609}
   m_Layer: 0
   m_Name: F4CRead
-  m_TagString: Untagged
+  m_TagString: F4URead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

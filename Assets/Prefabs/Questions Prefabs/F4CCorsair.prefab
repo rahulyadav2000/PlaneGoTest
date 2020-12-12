@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5767665580850074112}
   m_Layer: 0
   m_Name: F4CCorsair
-  m_TagString: Untagged
+  m_TagString: F4UBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

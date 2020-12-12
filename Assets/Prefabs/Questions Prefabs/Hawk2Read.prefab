@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5865838683988464817}
   m_Layer: 0
   m_Name: Hawk2Read
-  m_TagString: Untagged
+  m_TagString: Hawk2Read
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

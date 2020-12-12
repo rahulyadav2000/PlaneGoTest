@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8645837454866901400}
   m_Layer: 0
   m_Name: Piper18Read
-  m_TagString: Untagged
+  m_TagString: PiperRead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

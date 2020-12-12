@@ -6,49 +6,38 @@ using GoogleARCore;
 public class SpawnRunway : MonoBehaviour
 {
     public Transform Runway;
-    public GameObject[] Player;
-    private Vector3 NextSpawnPos;
+    
+    private Vector3 NextSpawnPos = new Vector3(0,-4,7);
 
-    private AugmentedImageController Control;
-    private ColorChanger Changer;
+    public GameObject Content;
+    public GameObject Quitcontroller;
+  
     // Start is called before the first frame update
     void Start()
-    {        
-        //Instantiate(Runway, new Vector3(0, 0, 7), Runway.rotation);
+    {
+        Content.SetActive(false);
+        Quitcontroller.SetActive(false);
         StartCoroutine(SpawnPath());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Control.IsAtr == true || Changer.isGreen == true)
-        {
-            Instantiate(Player[0], new Vector3(0, 1.5f, 7), Quaternion.identity);
-        }
-        if (Control.IsF16D == true || Changer.isGreen == true)
-        {
-            Instantiate(Player[1], new Vector3(0, 1.5f, 7), Quaternion.identity);
-        }
-        if (Control.IsF4C == true || Changer.isGreen == true)
-        {
-            Instantiate(Player[2], new Vector3(0, 1.5f, 7), Quaternion.identity);
-        }
-        if (Control.IsHawk2 == true || Changer.isGreen == true)
-        {
-            Instantiate(Player[3], new Vector3(0, 1.5f, 7), Quaternion.identity);
-        }
-        if (Control.IsPiper18 == true || Changer.isGreen == true)
-        {
-            Instantiate(Player[4], new Vector3(0, 1.5f, 7), Quaternion.identity);
-        }
+        
     }
 
     IEnumerator SpawnPath()
     {
+        Content.SetActive(true);
+        Invoke("QuitSpawner", 16f);
         Instantiate(Runway, NextSpawnPos, Runway.rotation);
         NextSpawnPos.z += 10;
         yield return new WaitForSeconds(1f);
-        Instantiate(Runway, NextSpawnPos, Runway.rotation);
-        //StartCoroutine(SpawnPath());
+        StartCoroutine(SpawnPath());
+    }
+
+    private void QuitSpawner()
+    {
+        Quitcontroller.SetActive(true);
     }
 }

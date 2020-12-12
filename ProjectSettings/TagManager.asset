@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GoldCoin
+  - Correct
+  - Wrong
+  - ATRRead
+  - F16DRead
+  - F4URead
+  - Hawk2Read
+  - PiperRead
+  - ATRBlock
+  - F16Block
+  - F4UBlock
+  - HawkBlock
+  - PiperBlock
+  - DeadCoin
+  - Runway
+  - Quit
   layers:
   - Default
   - TransparentFX

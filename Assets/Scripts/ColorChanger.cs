@@ -11,15 +11,14 @@ public class ColorChanger : MonoBehaviour
     
     public GameObject Controller;
 
-    //public CameraMove CamMove;
+    private AugmentedImageController Control;
 
     public bool isGreen = false;
+    
     // Start is called before the first frame update
     void Start()
     {
-        //CamMove = GetComponent<CameraMove>();
-        Controller.SetActive(false);
-        //CamMove.enabled = false;        
+        Controller.SetActive(false);       
     }
 
     // Update is called once per frame
@@ -47,9 +46,10 @@ public class ColorChanger : MonoBehaviour
 
         if(isGreen == true)
         {
-            Controller.SetActive(true);
-            //CamMove.enabled = true;
+            Controller.SetActive(true);   // Proceed further to the spawning of Runway & Coins
+            Invoke("Spawner", 1f);
         }
     }
 
+    
 }
